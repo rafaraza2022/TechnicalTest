@@ -1,13 +1,10 @@
-"""
-    Config management class
-    You have to define the file config as config.json
-"""
 import json
 from exceptions import ConfigFileException, FormatConfigException
 
 class Config(object):
     """
     Config management class
+        You have to define the file config as config.json
     """
     def __init__(self):
         self.__filename = "config.json"

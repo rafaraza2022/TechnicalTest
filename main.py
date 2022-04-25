@@ -8,7 +8,7 @@ from branch import BranchAPI
 
 import logging
 
-#Read configuration
+#Read configuration to start the application 
 try:
     conf = Config()
 except ConfigFileException:
@@ -26,9 +26,9 @@ else:
     api.add_resource(Webhook, '/')
 
     #add endpoint API
-    api.add_resource(OrganizationAPI, '/organizationAPI/<action>/<name>')
-    api.add_resource(RepositoryAPI, '/repository/<action>/<name>')
-    api.add_resource(BranchAPI, '/repository/<action>/<name>')
+    api.add_resource(OrganizationAPI, '/organizationAPI/<action>/<owner>/<name>')
+    api.add_resource(RepositoryAPI, '/repository/<action>/<owner>/<name>')
+    api.add_resource(BranchAPI, '/repository/<action>/<owner>/<name>')
 
     #Launch server
     if __name__ == '__main__':
