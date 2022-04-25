@@ -2,9 +2,22 @@
 
 ## Context
   Design automation solution  about code review for the security team
-## About the solution  
+  The goal is to have different ways to launch actions on github objects (organization, repository, branch, ...) :  
+  * Manually using API   
+  * With weebhook a component listens webhook and treat each event  
+  * You can schedule some action using API
+  
+## About the solution 
+  About the solution, I don't have time to finish all the development but I put the focus on design.  
+  In this project, I assume that a lot of functions are developped. 
+  I use POO to design the application because the code is used to treat event and for the endpoint API. Each object in github can be designed as an object in the code. For each object, you have class API associated for the endpoint. About webhook, the object is instantiated and you can call methods to do some actions when event arrived.  
+  I assume that some unknown event can be stored in a database  
+  I assume that each action done is stored in database and  if client wants, we can expose endpoint to permit them to do reporting.   
+  To improve the solution, I can write developper documentation and api documentation 
 
 ## How to read the project 
+  If you want to see how I developped, you can see the class Organization. 
+  I put a lot of descriptions in each files.  
 
 ## Environment 
 ### Install Python 
